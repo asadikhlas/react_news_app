@@ -2,31 +2,42 @@ import React,{Component} from 'react';
 import '../css/styles.css'
  
  
-class Header extends Component{ 
 
-    state = {
-        title:'The keywords are:',
-        keywords:''
-    }
-    inputchangeHandler(event){
-        // console.log(event.target.value)
-        this.setState({
-            keywords: event.target.value
-        });
-    }
-    render (){ 
+
+    // state = {
+    //     // active: 'active',
+    //     keywords:''
+    // }
+    // inputchangeHandler(event){
+    //     // const value = event.target.value === '' ? 'acive' : 'non=active'
+    //     // console.log(event.target.value)
+    //     this.setState({
+    //         keywords: event.target.value
+    //     });
+    // }
+  
+        // const style = {
+        //     background: 'red'
+        // }
+
+        // if(this.state.keywords !== ''){
+        //     style.background = 'blue'
+
+        // }else{
+        //     style.background = 'red'
+        // }
+        const Header = (props) => {
     return (
-    <header>
+    <header >
          <div className="logo">logo</div>
          <input 
          type="text"
-         onChange={(e) => this.inputchangeHandler(e)}
+         onChange={props.keywords}
          />
-         <div>{this.state.title}</div>
-         <div>{this.state.keywords}</div>
+         {/* <div>{this.state.title}</div>
+         <div>{this.state.keywords}</div> */}
     </header>
         )
     }
-} 
 
 export default Header;  
