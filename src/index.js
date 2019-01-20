@@ -5,7 +5,7 @@ import JSON from './db.json';
 //COMPONENTS
 import Header from './components/header';
 import NewsList from './components/news_list';
-import { target } from 'glamor';
+
 
 class App extends Component{
     state = {
@@ -32,7 +32,7 @@ class App extends Component{
         return (
             <div>
                 <Header keywords={this.getKeyword}/>
-                <NewsList news={this.state.filtered.lenght === 0 ? this.state.news : this.state.filtered }>
+                <NewsList news={this.state.filtered.length === 0 ? this.state.news : this.state.filtered }>
                 <h3>The News Are:</h3>
                 </NewsList>
     
